@@ -2,6 +2,11 @@
     gap: 3rem;
 }
 
+.home-content-introduction-card{
+    padding: 1rem;
+    border: 1px solid #98989a;
+}
+
 /* */
 .home-content-introduction-card{
     width: 100%;
