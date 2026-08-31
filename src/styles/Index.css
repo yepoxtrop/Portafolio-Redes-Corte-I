@@ -1,0 +1,91 @@
+#body-content{
+    gap: 3rem;
+}
+
+/* */
+.home-content-introduction-card{
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* */
+.home-content-introduction-card{
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.home-content-devs-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.title-section{
+    font-family: "JetBrains Mono";
+    color: #45474C;
+}
+
+.home-content-devs-info{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.card-dev-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px #98989a solid;
+    padding: 1rem;
+}
+
+.card-dev-header{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-dev-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dev-img{
+    width: 50%;
+}
+
+.card-dev-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dev-name{
+    font-family: "Inter";
+    font-weight: bold;
+}
+
+.dev-proffesion{
+    font-family: "JetBrains Mono";
+    color: #085AC0;
+}
+
+.card-dev-line{
+    border: none;
+    box-sizing: border-box;
+    height: 1px;
+    width: 100%;
+    background: #98989a;
+}

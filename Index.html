@@ -7,31 +7,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Luis Angel Sarmiento Diaz">
     <!--Enlaces-->
-    <link rel="icon" href="ruta-de-tu-imagen.ico" type="image/x-icon">
+    <link rel="icon" href="./src/media/img/icon/network.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/styles/Index.styles.css">
     <link rel="stylesheet" href="./src/styles/General.css">
+    <link rel="stylesheet" href="./src/styles/Index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <!--Titulo-->
     <title>NET_ARCHIVE // PORTAFOLIO</title>
 </head>
 <body>
-    <header>
-        <h1>NET_ARCHIVE // PORTAFOLIO</h1>
-        <nav>
+    <!--Encabezado-->
+    <header id="header">
+        <h1 id="header-title">NET_ARCHIVE // PORTAFOLIO</h1>
+        <nav id="title-nav">
             <ul>
-                <li><a href="./src/pages/week1.html">Week 1</a></li>
-                <li><a href="./src/pages/week2.html">Week 2</a></li>
-                <li><a href="./src/pages/week3.html">Week 3</a></li>
-                <li><a href="./src/pages/week4.html">Week 4</a></li>
-                <li><a href="./src/pages/week5.html">Week 5</a></li>
+                <li><a href="./Index.html">Home</a></li>
+                <li><a href="./src/pages/Week1.html">Week 1</a></li>
+                <li><a href="./src/pages/Week2.html">Week 2</a></li>
+                <li><a href="./src/pages/Week3.html">Week 3</a></li>
+                <li><a href="./src/pages/Week4.html">Week 4</a></li>
+                <li><a href="./src/pages/Week5.html">Week 5</a></li>
             </ul>
-            <button>Esquemas</button>
+            <button>RATE US</button>
         </nav>
     </header>
-    <section>
+
+    <!--Contenido principal-->
+    <section id="body-content">
+        
+        <div class="home-content-introduction-card">
+            <div>NODE_00 // ROOT_INFRASTRUCTURE</div>
+            <div>
+                <h3> Redes de Computadores // Portafolio de Ingeniería </h3>
+                <p> Documentación técnica y análisis estructural de arquitecturas de red. Este repositorio detalla la implementación, configuración y optimización de protocolos a través de diferentes topologías a nivel empresarial. </p>
+                <div>
+                    <button>Codigo Fuente</button>
+                    <button>Convertir a PDF</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home-content-devs-card">
+            <div>
+                <h2 class="title-section">> Equipo_de_Trabajo</h2>
+            </div>
+
+            <div class="home-content-devs-info">
+                <!-- Tarjeta Luis -->
+                <div class="card-dev-container">
+                    <div class="card-dev-header">
+                        <div class="card-dev-img">
+                            <img src="./src/media/img/profile/luis-beta.png" alt="img_luis" class="dev-img">
+                        </div>
+                        <div class="card-dev-info">
+                            <h3 class="dev-name">Luis Angel Sarmiento Diaz</h3>
+                            <p class="dev-proffesion">Estudiante de Ingeniería de Sistemas</p>
+                        </div>
+                    </div>
+                    <hr class="card-dev-line">
+                    <div class="card-dev-footer">
+                        <div>s</div>
+                        <div>s</div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Cesar -->
+                <div class="card-dev-container">
+                    <div class="card-dev-header">
+                        <div class="card-dev-img">
+                            <img src="./src/media/img/profile/cesar-beta.png" alt="img_cesar" class="dev-img">
+                        </div>
+                        <div class="card-dev-info">
+                            <h3 class="dev-name">Cesar Esneider Giraldo Avile</h3>
+                            <p class="dev-proffesion">Estudiante de Ingeniería de Sistemas</p>
+                        </div>
+                    </div>
+                    <hr class="card-dev-line">
+                    <div class="card-dev-footer">
+                        <div>s</div>
+                        <div>s</div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Santiago -->
+                <div class="card-dev-container">
+                    <div class="card-dev-header">
+                        <div class="card-dev-img">
+                            <img src="./src/media/img/profile/santiago-beta.png" alt="img_santiago" class="dev-img">
+                        </div>
+                        <div class="card-dev-info">
+                            <h3 class="dev-name">Santiago Rodriguez</h3>
+                            <p class="dev-proffesion">Estudiante de Ingeniería de Sistemas</p>
+                        </div>
+                    </div>
+                    <hr class="card-dev-line">
+                    <div class="card-dev-footer">
+                        <div>s</div>
+                        <div>s</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div></div>
     </section>
+    
+    <!--Pie de pagina-->
+    <footer>
+        <span>&copy; 2024 NET_ARCHIVE // PORTAFOLIO. Todos los derechos reservados.</span>        
+    </footer>
 </body>
 </html>
