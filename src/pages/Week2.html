@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!--Metadatos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Luis Angel Sarmiento Diaz">
+    <!--Enlaces-->
+    <link rel="icon" href="../media/img/icon/network.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/General.css">
+    <link rel="stylesheet" href="../styles/Week2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <!--Titulo-->
+    <title>Semana 2 // NET_ARCHIVE</title>
+</head>
+<body>
+    <!--Encabezado-->
+    <header id="header">
+        <h1 id="header-title">NET_ARCHIVE // PORTAFOLIO</h1>
+        <nav id="title-nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="./Week1.html">Week 1</a></li>
+                <li><a href="./Week2.html">Week 2</a></li>
+                <li><a href="./Week3.html">Week 3</a></li>
+                <li><a href="./Week4.html">Week 4</a></li>
+                <li><a href="./Week5.html">Week 5</a></li>
+            </ul>
+            <button>RATE US</button>
+        </nav>
+    </header>
+
+    <!--Contenido principal-->
+    <section id="body-content">
+        <div class="week-content">
+
+            <!-- ============ Hero / Doc Node ============ -->
+            <div class="week-hero">
+                <span class="node-badge"><span class="dot"></span>DOC_NODE_02 // ONLINE</span>
+                <h2 class="week-title">Semana 2: Comunicación de Datos, Protocolos y CLI</h2>
+                <p class="week-description">
+                    Fundamentos del proceso de comunicación (emisor, canal, receptor, ruido y retroalimentación),
+                    las reglas que rigen un protocolo de red, las organizaciones que estandarizan Internet y los
+                    modos de acceso y configuración de la CLI de Cisco (IOS).
+                </p>
+            </div>
+
+            <!-- ============ Conceptos + Activos ============ -->
+            <div class="week-grid">
+
+                <!-- Columna de conceptos -->
+                <div class="concepts-col">
+                    <div class="concept-card">
+                        <span class="concept-card-label">CONCEPT_01 // COMUNICACIÓN</span>
+                        <h3 class="concept-card-title">Proceso de comunicación</h3>
+                        <p class="concept-card-desc">
+                            Flujo emisor → codificación → mensaje → canal → receptor → decodificación.
+                            El ruido y el contexto pueden alterar el mensaje; la retroalimentación confirma
+                            que se entendió correctamente.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">EMISOR</span>
+                            <span class="tag">RUIDO</span>
+                            <span class="tag">FEEDBACK</span>
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <span class="concept-card-label">CONCEPT_02 // PROTOCOLOS</span>
+                        <h3 class="concept-card-title">Protocolos de red</h3>
+                        <p class="concept-card-desc">
+                            Acuerdos sobre método, idioma y confirmación de un mensaje. Cumplen funciones de
+                            direccionamiento, confiabilidad, control de flujo, secuenciación y detección de
+                            errores en cada capa.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">TCP/IP</span>
+                            <span class="tag">OSI</span>
+                            <span class="tag">PDU</span>
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <span class="concept-card-label">CONCEPT_03 // CLI CISCO</span>
+                        <h3 class="concept-card-title">Acceso y modos de comando</h3>
+                        <p class="concept-card-desc">
+                            Métodos de acceso por consola, SSH o Telnet, y jerarquía de modos: EXEC de usuario,
+                            EXEC privilegiado, configuración global, de línea y de interfaz.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">SSH</span>
+                            <span class="tag">IOS</span>
+                            <span class="tag">EXEC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de activos -->
+                <div class="assets-col">
+                    <div class="asset-panel">
+                        <div class="asset-panel-header">
+                            <span class="asset-panel-label">MULTIMODAL_ASSET // DIAGRAMA_PROCESO_COMUNICACION</span>
+                        </div>
+                        <div class="image-slot">
+                            <img src="../media/img/profile/week2.png" alt="Diagrama del proceso de comunicación: emisor, codificación, mensaje, canal, receptor y decodificación" class="dev-img">
+                        </div>
+                        <p class="asset-caption">Diagrama del proceso de comunicación trabajado en la Sesión 3.</p>
+                    </div>
+
+                    <div class="terminal-row">
+                        <div class="terminal-block">
+                            <div class="terminal-block-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot amber"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-filename">SW_CLI_MODES.LOG</span>
+                            </div>
+                            <pre>Switch&gt; enable
+Switch#
+Switch#configure terminal
+Switch(config)#line console 0
+Switch(config-line)#exit
+Switch(config)#</pre>
+                        </div>
+
+                        <div class="terminal-block">
+                            <div class="terminal-block-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot amber"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-filename">SW_CONFIG.LOG</span>
+                            </div>
+                            <pre>Switch(config)#hostname SW1-ACCESS
+SW1-ACCESS(config)#enable secret ******
+SW1-ACCESS(config)#service password-encryption
+SW1-ACCESS(config)#banner motd #Acceso restringido#
+SW1-ACCESS(config)#end
+SW1-ACCESS#write memory</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ Requisitos y funciones del protocolo ============ -->
+            <div class="week-section">
+                <h4 class="week-section-title">&gt; Requisitos_del_protocolo_de_red</h4>
+                <div class="mini-grid">
+                    <div class="mini-card">
+                        <span class="mini-card-title">CODIFICACIÓN</span>
+                        <p class="mini-card-desc">Convierte la información en bits, señales de luz, sonido o impulsos eléctricos aptos para el medio.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-card-title">FORMATO</span>
+                        <p class="mini-card-desc">Estructura del mensaje según el tipo y el canal utilizado para entregarlo.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-card-title">TAMAÑO</span>
+                        <p class="mini-card-desc">Los mensajes se dividen en tramas del tamaño adecuado para el medio de transmisión.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-card-title">ENTREGA</span>
+                        <p class="mini-card-desc">Unicast (uno a uno), multicast (uno a varios) o broadcast (uno a todos).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ Canales y modos de comunicación ============ -->
+            <div class="week-section">
+                <h4 class="week-section-title">&gt; Canales_y_modos_de_transmisión</h4>
+                <table class="model-table">
+                    <thead>
+                        <tr>
+                            <th>Clasificación</th>
+                            <th>Modo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Dirección del flujo</td>
+                            <td class="pdu">Simplex</td>
+                            <td>La información circula en un solo sentido, del emisor al receptor.</td>
+                        </tr>
+                        <tr>
+                            <td class="pdu">Half-duplex</td>
+                            <td>Circula en ambos sentidos, pero no al mismo tiempo.</td>
+                        </tr>
+                        <tr>
+                            <td class="pdu">Full-duplex</td>
+                            <td>Circula en ambos sentidos de forma simultánea.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Sincronización</td>
+                            <td class="pdu">Asíncrona</td>
+                            <td>El dispositivo envía datos cuando los necesita, sin sincronización temporal fija.</td>
+                        </tr>
+                        <tr>
+                            <td class="pdu">Síncrona</td>
+                            <td>Los dispositivos intercambian datos siguiendo una coordinación temporal común.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============ Organizaciones de estándares ============ -->
+            <div class="week-section">
+                <h4 class="week-section-title">&gt; Organizaciones_de_estándares</h4>
+                <div class="mini-grid">
+                    <div class="mini-card">
+                        <span class="mini-card-title">IEEE</span>
+                        <p class="mini-card-desc">Estándares de electrónica e ingeniería eléctrica (cableado, conectores, racks).</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-card-title">IETF</span>
+                        <p class="mini-card-desc">Desarrolla y mantiene los estándares y protocolos técnicos de Internet.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-card-title">ICANN / IANA</span>
+                        <p class="mini-card-desc">Administran nombres de dominio y asignación de números de Internet.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-card-title">ISOC / IAB</span>
+                        <p class="mini-card-desc">Promueven la evolución abierta de Internet y dirigen su arquitectura general.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ Modelos de referencia ============ -->
+            <div class="week-section">
+                <h4 class="week-section-title">&gt; Modelos_de_referencia // OSI_vs_TCP-IP</h4>
+                <table class="model-table">
+                    <thead>
+                        <tr>
+                            <th>Capa OSI</th>
+                            <th>Capa TCP/IP</th>
+                            <th>PDU</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aplicación / Presentación / Sesión</td>
+                            <td>Aplicación</td>
+                            <td class="pdu">Datos</td>
+                        </tr>
+                        <tr>
+                            <td>Transporte</td>
+                            <td>Transporte</td>
+                            <td class="pdu">Segmento</td>
+                        </tr>
+                        <tr>
+                            <td>Red</td>
+                            <td>Internet</td>
+                            <td class="pdu">Paquete</td>
+                        </tr>
+                        <tr>
+                            <td>Enlace de datos</td>
+                            <td rowspan="2">Acceso a la red</td>
+                            <td class="pdu">Trama</td>
+                        </tr>
+                        <tr>
+                            <td>Física</td>
+                            <td class="pdu">Bits</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============ Capturas del corte ============ -->
+            <div class="week-section">
+                <h4 class="week-section-title">&gt; Capturas_del_corte</h4>
+                <div class="captures-grid">
+                    <div class="capture-slot">
+                        <span class="capture-slot-label">CAPTURA_01 - Diagrama propuesto actividad</span>
+                        <img src="../media/img/profile/diagrama.png" alt="Diagrama de actividad cisco" class="dev-img">
+                    </div>
+                    <div class="capture-slot">
+                        <span class="capture-slot-label">CAPTURA_02 - Show running-config cisco</span>
+                        <img src="../media/img/profile/showrun.png" alt="Show running config" class="dev-img">
+                    </div>
+                    <div class="capture-slot">
+                        <span class="capture-slot-label">CAPTURA_03 - Presentacion capa enlace de datos</span>
+                        <img src="../media/img/profile/pechakucha.png" alt="Presentacion capa enlace de datos" class="dev-img">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
