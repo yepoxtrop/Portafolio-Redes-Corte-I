@@ -35,8 +35,11 @@
        COLORES DE ESTADO
        ==================================== */
     --color-success: #00d60b;
+    --color-success-shadow: rgba(16, 185, 129, 0.18);
     --color-error: #d60000;
+    --color-error-shadow: rgba(185, 16, 16, 0.18);
     --color-warning: #696969;
+    --color-warning-shadow: rgba(78, 78, 78, 0.18);
     
     /* ====================================
        COLORES ADICIONALES

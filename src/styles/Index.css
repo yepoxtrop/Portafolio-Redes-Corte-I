@@ -1,74 +1,97 @@
-/*=================================
-        ESTILOS GENERALES
-=================================*/
+/* ====================================
+   ESTILOS ESPECÍFICOS DE PÁGINA INDEX
+   ==================================== */
 
-#body-content{
-    gap: 3rem;
+/* ====================================
+   CONTENEDOR PRINCIPAL
+   ==================================== */
+
+/**
+ * Body-content override
+ * - Establece espaciado adicional entre secciones
+ */
+#body-content {
+    gap: var(--spacing-2xl);
 }
 
-/* */
-.inter-line{
-    transform:rotateX(30deg);
+/**
+ * Línea de efecto 3D
+ * - Crea efecto visual de transformación
+ */
+.inter-line {
+    transform: rotateX(30deg);
     position: relative;
 }
 
-/* */
+/* ====================================
+   TARJETA DE INTRODUCCIÓN
+   ==================================== */
 
-.home-content-introduction-card{
+/**
+ * Tarjeta principal de bienvenida
+ * - Contiene título y descripción del proyecto
+ * - Borders y padding para separación visual
+ */
+.home-content-introduction-card {
     padding: 1rem;
-    border: 1px solid #98989a;
-    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-light);
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0.2rem,1rem;
 }
 
-.introduction-card-title-container{
+.introduction-card-title-container {
     gap: 0.2rem;
     display: flex;
     flex-direction: column;
 }
 
-.icon-status-true{
+/* ====================================
+   ICONOS DE ESTADO
+   ==================================== */
+
+/**
+ * Iconos circulares con sombra de estado
+ * - Verde para completado
+ * - Rojo para error/pendiente
+ * - Gris para no iniciado
+ */
+.icon-status-true {
     width: 8px;
     height: 8px;
     border-radius: 10px;
-    background-color: #00d60b;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+    background-color: var(--color-success);
+    box-shadow: 0 0 0 3px var(--color-success-shadow);
 }
 
-.icon-status-false{
+.icon-status-false {
     width: 8px;
     height: 8px;
     border-radius: 10px;
-    background-color: #d60000;
-    box-shadow: 0 0 0 3px rgba(185, 16, 16, 0.18);
+    background-color: var(--color-error);
+    box-shadow: 0 0 0 3px var(--color-error-shadow);
 }
 
-.icon-status-false{
+.icon-status-null {
     width: 8px;
     height: 8px;
     border-radius: 10px;
-    background-color: #d60000;
-    box-shadow: 0 0 0 3px rgba(185, 16, 16, 0.18);
+    background-color: var(--color-warning);
+    box-shadow: 0 0 0 3px var(--color-warning-shadow);
 }
 
-.icon-status-null{
-    width: 8px;
-    height: 8px;
-    border-radius: 10px;
-    background-color: #696969;
-    box-shadow: 0 0 0 3px rgba(78, 78, 78, 0.18);
+/* ====================================
+   TARJETA: TEXTO E INFORMACIÓN
+   ==================================== */
+
+.introduction-card-title {
+    font-family: var(--font-mono);
+    color: var(--color-text-dark);
 }
 
-.introduction-card-title{
-    font-family: "JetBrains Mono";
-    color: #45474C
-}
-
-.introduction-card-container-info{
+.introduction-card-container-info {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,306 +99,458 @@
     gap: 1rem;
 }
 
-.introduction-card-subtitle{
-    font-family: "Inter";
+.introduction-card-subtitle {
+    font-family: var(--font-sans);
     font-weight: bold;
 }
 
-.introduction-card-description{
-    font-family: "Inter";
-    color: #45474C;
+.introduction-card-description {
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
 }
 
-.introduction-card-buttons-container{
+/* ====================================
+   BOTONES DE ACCIÓN
+   ==================================== */
+
+/**
+ * Contenedor de botones
+ * - Layout horizontal con espacio entre botones
+ */
+.introduction-card-buttons-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 2rem;
 }
 
-.button-pdf{
+/**
+ * Botón PDF
+ * - Fondo oscuro con texto claro
+ * - Cursor pointer para indicar interactividad
+ */
+.button-pdf {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: solid 1px #091426;
-    background-color: #091426;
-    color: #ffffff;
-    font-family: "JetBrains Mono";
+    border: solid 1px var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-family: var(--font-mono);
 }
 
-.svg-download{
-    color: #ffffff;
+/**
+ * Icono de descarga
+ * - Hereda color de su contenedor
+ */
+.svg-download {
+    color: var(--color-text-white);
 }
 
-.button-source{
+/**
+ * Botón de código fuente
+ * - Fondo claro con borde gris
+ * - Texto oscuro para contraste
+ */
+.button-source {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: solid 1px #94A3B8;
-    background-color: #ffffff;
-    color: #091426;
-    font-family: "JetBrains Mono";
-    
+    border: solid 1px var(--color-btn-border-alt);
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
 }
 
 
 
-/* */
+/* *//* ====================================
+   SECCIÓN DE EQUIPO DE DESARROLLADORES
+   ==================================== */
 
-
-.home-content-devs-card{
+/**
+ * Tarjeta contenedora del equipo
+ * - Fondo semi-transparente
+ * - Agrupa todas las tarjetas de desarrolladores
+ */
+.home-content-devs-card {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: rgba(255,255,255,0.4);
-}
-.title-section{
-    font-family: "JetBrains Mono";
-    color: #45474C;
+    background-color: var(--color-bg-card);
 }
 
-.home-content-devs-info{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.5rem;
+/**
+ * Título de sección
+ * - Tipografía monoespaciada para contraste
+ */
+.title-section {
+    font-family: var(--font-mono);
+    color: var(--color-text-dark);
 }
 
-.card-dev-container{
+/**
+ * Grid de tarjetas de desarrolladores
+ * - 3 columnas de igual tamaño
+ * - Espacio generoso entre elementos
+ */
+.home-content-devs-info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/**
+ * Tarjeta individual de desarrollador
+ * - Contenedor flex con centrado
+ * - Bordes y padding para definición
+ */
+.card-dev-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    border: 1px #98989a solid;
+    background-color: var(--color-bg-light);
+    border: 1px var(--color-border) solid;
     padding: 1rem;
 }
 
-.card-dev-header{
+/**
+ * Encabezado de tarjeta de desarrollador
+ * - Contiene imagen y nombre
+ * - Centrado verticalmente
+ */
+.card-dev-header {
     width: 100%;
-    padding: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
 }
 
-.card-dev-img{
-    width: 50%;
+/**
+ * Contenedor de imagen de desarrollador
+ * - Foto circulada con border-radius
+ */
+.card-dev-img {
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.dev-img{
+/**
+ * Imagen del desarrollador
+ * - Ocupa todo el ancho disponible
+ * - Bordes redondeados
+ */
+.dev-img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
 }
 
-.car-dev-rate-assignature{
-    display: none;
-}
-
-.card-dev-info{
+/**
+ * Contenedor de información de desarrollador
+ * - Nombre y profesión centrados
+ */
+.card-dev-info {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
-.dev-name{
-    font-family: "Inter";
+/**
+ * Nombre del desarrollador
+ * - Tipografía sans-serif en negrita
+ */
+.dev-name {
+    font-family: var(--font-sans);
     font-weight: bold;
 }
 
-.dev-proffesion{
-    font-family: "JetBrains Mono";
-    color: #085AC0;
+/**
+ * Profesión/Rol del desarrollador
+ * - Tipografía monoespaciada
+ * - Color secundario para diferenciación
+ */
+.dev-proffesion {
+    font-family: var(--font-mono);
+    color: var(--color-secondary);
 }
 
-.card-dev-line{
+/**
+ * Calificación de asignatura (oculta)
+ * - Display none: elemento no se muestra
+ */
+.car-dev-rate-assignature {
+    display: none;
+}
+.card-dev-line {
     border: none;
     box-sizing: border-box;
     height: 1px;
     width: 100%;
-    background: #98989a;
+    background: var(--color-border);
 }
 
 /* */
-.issues-container{
+/* ====================================
+   SECCIÓN DE PROBLEMAS / ISSUES
+   ==================================== */
+
+/**
+ * Contenedor de bitácora de temas
+ * - Agrupa título y tarjetas de habilidades
+ * - Espaciado flexible
+ */
+.issues-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
 }
 
-.issues-title{
-    font-family: "Inter";
+/**
+ * Título de la sección de problemas
+ * - Tipografía sans-serif
+ */
+.issues-title {
+    font-family: var(--font-sans);
 }
 
+/* ====================================
+   TARJETAS DE HABILIDADES / SKILLS
+   ==================================== */
 
-/* */ 
-#skills-container{
+/**
+ * Contenedor grid de tarjetas
+ * - 3 columnas de igual tamaño
+ * - Gap de 2.5rem entre elementos
+ */
+#skills-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem;
 }
 
-.skill-card{
+/**
+ * Tarjeta individual de habilidad
+ * - Bordes y padding para definición
+ * - Fondo blanco para contraste
+ */
+.skill-card {
     width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #98989a;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.skill-card-sub{
+/**
+ * Sub-contenedor de tarjeta
+ * - Agrupa título y contenido superior
+ */
+.skill-card-sub {
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--color-bg-light);
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
 
-.skill-card-header{
+/**
+ * Encabezado de tarjeta de habilidad
+ * - Layout horizontal: número y estado
+ * - Distribuye elementos en los extremos
+ */
+.skill-card-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
 }
 
-#skill-card-status-container{
+/**
+ * Contenedor de estado de habilidad
+ * - Badge con fondo y borde
+ * - Icono + texto de estado
+ */
+#skill-card-status-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
     padding: 0.2rem 0.5rem;
+    border: 1px solid var(--color-badge-border);
+    background-color: var(--color-badge-bg);
+    border-radius: var(--radius-sm);
 }
 
-.skill-card-number{
-    font-family: "JetBrains Mono";
+/**
+ * Número de tema/habilidad
+ * - Tipografía monoespaciada
+ * - Tamaño base (1rem)
+ * - Cambio de color según estado
+ */
+.skill-card-number {
+    font-family: var(--font-mono);
     font-size: 1rem;
+    color: var(--color-text-dark);
 }
 
-.skill-card-null-number{
-    font-family: "JetBrains Mono";
-    font-size: 1rem;
-    color: #6d7179;
+.skill-card-number[data-status] {
+    color: var(--color-text-darker);
 }
 
-.skill-card-status-container-status{
-    border: 1px solid #C5C6CD;
-    background-color: #E4E2E3;
-    border-radius: 5px;
-    padding: 0.2rem;
+.skill-card-number:not([data-status]) {
+    color: var(--color-text-light);
 }
 
-.skill-card-status-container-null-status{
-    border: 1px solid #C5C6CD;
-    background-color: #E4E2E3;
-    border-radius: 5px;
-    padding: 0.2rem;
-}
-
-.skill-card-status{
-    font-family: "JetBrains Mono";
+/**
+ * Texto de estado de habilidad
+ * - Tamaño reducido (0.8rem)
+ * - Tipografía monoespaciada
+ */
+.skill-card-status {
+    font-family: var(--font-mono);
     font-size: 0.8rem;
-    color: #45474C;
+    color: var(--color-text-dark);
 }
 
-.skill-card-null-status{
-    font-family: "JetBrains Mono";
-    font-size: 0.8rem;
-    color: #6d7179;
+.skill-card-status:not([data-status]) {
+    color: var(--color-text-light);
 }
 
-.skill-card-title{
-    font-family: "Inter";
+/**
+ * Título/Nombre de la habilidad
+ * - Tipografía sans-serif
+ * - Color dinámico según estado
+ */
+.skill-card-title {
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
 }
 
-.skill-card-null-title{
-    font-family: "Inter";
-    color: #6d7179;
+.skill-card-title[data-status] {
+    color: var(--color-text-darker);
 }
 
-.skill-card-description{
+.skill-card-title:not([data-status]) {
+    color: var(--color-text-light);
+}
+
+/**
+ * Contenedor de descripción
+ * - Agrupa texto y barras de progreso
+ */
+.skill-card-description {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.skill-card-paragraph{
-    font-family: "Inter";
+/**
+ * Párrafo de descripción
+ * - Tamaño pequeño (0.8rem)
+ * - Color dinámico según estado
+ */
+.skill-card-paragraph {
+    font-family: var(--font-sans);
     font-size: 0.8rem;
-    color: #45474C;
+    color: var(--color-text-dark);
 }
 
-.skill-card-null-paragraph{
-    font-family: "Inter";
-    font-size: 0.8rem;
-    color: #6d7179;
+.skill-card-paragraph:not([data-status]) {
+    color: var(--color-text-light);
 }
 
-.skill-card-lines-container{
+/* ====================================
+   BARRAS DE PROGRESO
+   ==================================== */
+
+/**
+ * Contenedor de líneas/barras de progreso
+ * - Posicionamiento relativo para elementos absolutos
+ * - Altura fija de 5px
+ */
+.skill-card-lines-container {
     position: relative;
-}
-
-.skill-card-line-base{
     width: 100%;
     height: 5px;
-    background-color: #d6d7da;
-    display: flex;
-    border-radius: 10px;
 }
 
-
-
-.skill-card-line-true{
+/**
+ * Barra de progreso base (fondo)
+ * - Ancho completo del contenedor
+ * - Color gris claro predeterminado
+ */
+.skill-card-line-base {
+    width: 100%;
     height: 5px;
-    background-color: #085AC0;
-    display: flex;
-    border-radius: 10px;
+    background-color: var(--color-progress-bg);
+    border-radius: var(--radius-md);
+}
+
+/**
+ * Barra de progreso completada
+ * - Color azul secundario
+ * - Ancho variable según porcentaje
+ * - Cursor pointer para interactividad
+ */
+.skill-card-line-true {
+    height: 5px;
+    background-color: var(--color-secondary);
+    border-radius: var(--radius-md);
     position: absolute;
     cursor: pointer;
     top: 0;
 }
 
-.skill-card-line-false{
+/**
+ * Barra de progreso con error
+ * - Color rojo de error
+ * - Ancho variable según porcentaje
+ * - Cursor pointer para interactividad
+ */
+.skill-card-line-false {
     height: 5px;
-    background-color: #c00808;
-    display: flex;
-    border-radius: 10px;
+    background-color: var(--color-error);
+    border-radius: var(--radius-md);
     position: absolute;
     cursor: pointer;
     top: 0;
 }
 
-.skill-card-line-null{
+/**
+ * Barra de progreso no iniciada
+ * - Mismo color que la base
+ * - Indica estado neutral/sin progreso
+ */
+.skill-card-line-null {
     height: 5px;
-    background-color: #d6d7da;
-    display: flex;
-    border-radius: 10px;
+    background-color: var(--color-progress-bg);
+    border-radius: var(--radius-md);
     position: absolute;
     top: 0;
 }
 
 /*=================================
-            ANIMACIONES
+    ANIMACIONES
 =================================*/
 
 
 /*=================================
-            RESPONSIVE
+    RESPONSIVE
 =================================*/
