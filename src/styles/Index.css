@@ -546,6 +546,10 @@
     top: 0;
 }
 
+.skill-card-null-paragraph{
+    font-size: 0.8rem;
+}
+
 /*=================================
     ANIMACIONES
 =================================*/
