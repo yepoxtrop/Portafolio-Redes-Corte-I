@@ -1,109 +1,315 @@
-/* Estilos generales del documento */
-:root{
+/* ====================================
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ==================================== */
 
+:root {
+    /* ====================================
+       PALETA DE COLORES PRIMARIOS
+       ==================================== */
+    --color-primary: #091426;
+    --color-secondary: #085AC0;
+    --color-tertiary: #000000;
+    
+    /* ====================================
+       COLORES DE TEXTO
+       ==================================== */
+    --color-text-dark: #45474C;
+    --color-text-darker: #34363b;
+    --color-text-light: #6d7179;
+    --color-text-white: #ffffff;
+    
+    /* ====================================
+       COLORES DE FONDO
+       ==================================== */
+    --color-bg-light: #ffffff;
+    --color-bg-page: #FBF8FA;
+    --color-bg-card: rgba(255, 255, 255, 0.4);
+    
+    /* ====================================
+       COLORES DE BORDES Y LÍNEAS
+       ==================================== */
+    --color-border: #98989a;
+    --color-border-grid: #cdcdcd;
+    
+    /* ====================================
+       COLORES DE ESTADO
+       ==================================== */
+    --color-success: #00d60b;
+    --color-error: #d60000;
+    --color-warning: #696969;
+    
+    /* ====================================
+       COLORES ADICIONALES
+       ==================================== */
+    --color-badge-bg: #E4E2E3;
+    --color-badge-border: #C5C6CD;
+    --color-progress-bg: #d6d7da;
+    --color-btn-border-alt: #94A3B8;
+    
+    /* ====================================
+       TIPOGRAFÍAS (FAMILIAS DE FUENTES)
+       ==================================== */
+    --font-mono: "JetBrains Mono", monospace;
+    --font-sans: "Inter", sans-serif;
+    
+    /* ====================================
+       PESOS DE FUENTE
+       ==================================== */
+    --font-weight-normal: 400;
+    --font-weight-bold: 500;
+    --font-weight-extra-bold: 700;
+    
+    /* ====================================
+       TAMAÑOS DE FUENTE (Escala)
+       ==================================== */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    
+    /* ====================================
+       ESPACIADO (Padding/Margin)
+       ==================================== */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* ====================================
+       BORDES Y RADIOS
+       ==================================== */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
 }
-*{
+
+/* ====================================
+   RESET Y ESTILOS BASE
+   ==================================== */
+
+/**
+ * Reset global: elimina márgenes y paddings predeterminados
+ * Establece box-sizing para todos los elementos
+ */
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
 }
 
+/**
+ * Asegura que html y body ocupen al menos la altura de la ventana
+ */
 html, body {
     min-height: 100%;
 }
 
-body{
+/**
+ * Estilos base del body
+ * - Layout flex para footer sticky
+ * - Color de fondo neutro
+ * - Altura mínima de viewport
+ */
+body {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #FBF8FA;
+    background-color: var(--color-bg-page);
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
 }
 
-/* Estilos para el encabezado */
-header{
+/* ====================================
+   ENCABEZADO (HEADER)
+   ==================================== */
+
+/**
+ * Encabezado principal
+ * - Posicionamiento sticky para mantenerse visible al scroll
+ * - Layout flex horizontal
+ * - Borde inferior para separación visual
+ */
+header {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-
-    padding: 1rem 3rem;
-    background-color: #ffffff;
-    font-family: "JetBrains Mono";
-
-    border-bottom: 1px solid #98989a;
-
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background-color: var(--color-bg-light);
+    font-family: var(--font-mono);
+    border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-header h1{
-    font-family: "JetBrains Mono", monospace;
+/**
+ * Título principal del header
+ * - Familia de fuente monoespaciada
+ * - Peso bold para destacar
+ */
+header h1 {
+    font-family: var(--font-mono);
     font-optical-sizing: auto;
-    font-weight: bold;
+    font-weight: var(--font-weight-extra-bold);
     font-style: normal;
 }
 
-
-header nav ul{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
-}
-
-header nav ul li a{
-    text-decoration: none;
-    color: #45474C;
-}
-
-header nav button{
-    padding: 0.5rem 1rem;
-    font-family: "JetBrains Mono";
-    border: 1px solid #000000;
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-}
-
+/**
+ * Barra de navegación
+ * - Layout flex para alinear elementos horizontalmente
+ * - Espacio entre nav y botón
+ */
 header nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: var(--spacing-md);
 }
 
-/* Estilos para el contenido principal */
+/**
+ * Lista de enlaces de navegación
+ * - Sin estilos de lista (bullets removidos)
+ * - Elementos espaciados uniformemente
+ */
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+/**
+ * Enlaces de navegación
+ * - Color de texto oscuro
+ * - Sin decoración de subrayado
+ */
+header nav ul li a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-family: var(--font-mono);
+    transition: color 0.3s ease;
+}
+
+/**
+ * Botón RATE US
+ * - Fondo oscuro con texto blanco
+ * - Borde y padding para claridad
+ * - Cursor pointer para interactividad
+ */
+header nav button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-family: var(--font-mono);
+    border: 1px solid var(--color-tertiary);
+    background-color: var(--color-tertiary);
+    color: var(--color-text-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/**
+ * Hover del botón
+ */
+header nav button:hover {
+    opacity: 0.8;
+}
+
+/* ====================================
+   CONTENIDO PRINCIPAL (BODY-CONTENT)
+   ==================================== */
+
+/**
+ * Contenedor principal del contenido
+ * - Patrón de grid de fondo para efecto visual
+ * - Flex column para apilar secciones verticalmente
+ * - Espaciado y padding generoso
+ */
 #body-content {
+    /* Patrón de grid visual de fondo */
     background-image: 
-        linear-gradient(90deg, #cdcdcd 1px, transparent 1px),   
-        linear-gradient(180deg, #cdcdcd 1px, transparent 1px);  
+        linear-gradient(90deg, var(--color-border-grid) 1px, transparent 1px),   
+        linear-gradient(180deg, var(--color-border-grid) 1px, transparent 1px);  
     background-size: 50px 50px; 
     background-position: 0 0, 10px 10px;   
-    background-color: #FBF8FA;
+    background-color: var(--color-bg-page);
 
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 2rem 3rem;
-    gap: 3rem;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    gap: var(--spacing-2xl);
     flex: 1;
 }
 
-/* Footer */
-footer{
+/* ====================================
+   PIE DE PÁGINA (FOOTER)
+   ==================================== */
+
+/**
+ * Footer principal
+ * - Layout flex para distribuir contenido
+ * - Fondo blanco para contraste
+ * - Posicionado al final del flujo
+ */
+footer {
     width: 100%;
-    background-color: #ffffff;
-    font-family: "Inter";
+    background-color: var(--color-bg-light);
+    font-family: var(--font-sans);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-top: 1px solid var(--color-border);
+}
+
+/**
+ * Texto de derechos de autor
+ * - Peso bold para énfasis
+ */
+.copy-footer {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-dark);
+}
+
+/**
+ * Enlaces del footer
+ * - Sin decoración de subrayado
+ * - Color de texto estándar
+ */
+footer ul {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+footer ul li {
+    list-style: none;
+    color: var(--color-text-dark);
+}
+
+footer ul li a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    transition: color 0.3s ease;
+}
+
+/**
+ * Hover en enlaces del footer
+ */
+footer ul li a:hover, header ul li a:hover {
+    color: var(--color-secondary);
 }
