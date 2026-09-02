@@ -1,4 +1,7 @@
 /* Estilos generales del documento */
+:root{
+
+}
 *{
     padding: 0;
     box-sizing: border-box;
@@ -92,4 +95,15 @@ header nav {
     padding: 2rem 3rem;
     gap: 3rem;
     flex: 1;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    background-color: #ffffff;
+    font-family: "Inter";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
