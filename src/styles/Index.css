@@ -169,3 +169,21 @@
 }
 
 /* */ 
+#skills-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.skill-card{
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.skill-card-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
