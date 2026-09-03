@@ -312,6 +312,21 @@ header {
         padding: 1rem 1.5rem !important;
     }
     
+    .tipologia-redes {
+        grid-template-columns: 1fr; /* Pasa a 1 sola columna */
+    }
+
+    .tipologia-redes h2,
+    .tipologia-redes article,
+    .tipologia-redes img {
+        grid-column: 1 / -1; /* Ocupan todo el ancho de la pantalla */
+        grid-row: auto; /* Anula el forzado de filas que tenía en escritorio */
+    }
+
+    .tipologia-redes img {
+        margin-top: 1rem; /* Da un poco de respiro antes de mostrar la imagen al final */
+    }
+    
     /* Ajustes para Evidencias en celulares */
     .evidencias-semana {
         grid-template-columns: 1fr; /* Pasa a 1 sola columna */
