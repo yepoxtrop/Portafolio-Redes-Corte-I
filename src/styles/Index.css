@@ -301,6 +301,11 @@
     background: var(--color-border);
 }
 
+/*terminal*/
+.terminal-container{
+    display: flex;
+}
+
 /* */
 /* ====================================
    SECCIÓN DE PROBLEMAS / ISSUES
