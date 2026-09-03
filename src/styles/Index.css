@@ -305,8 +305,12 @@
 .terminal-container{
     display: flex;
     width: 70%;
-    background-color: #0A0F1D; 
+    background-color: #1E293B; 
     flex-direction: column;
+}
+
+.terminal-container span{
+    color: #94A3B8;
 }
 
 .terminal-header{
