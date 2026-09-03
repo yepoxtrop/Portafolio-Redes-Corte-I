@@ -304,6 +304,40 @@
 /*terminal*/
 .terminal-container{
     display: flex;
+    width: 70%;
+    background-color: #0A0F1D; 
+    flex-direction: column;
+}
+
+.terminal-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A0F1D;
+    padding: 0.5rem 0.8rem;
+}
+
+.terminal-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+}
+
+.terminal-header-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terminal-body-section1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* */
