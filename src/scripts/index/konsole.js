@@ -56,15 +56,15 @@ function konsole() {
         delay++;
     });
 
-    delay = 1;
-    arrayKonsoleLuis.forEach(element => {
-        setTimeout(() => {
-            sectionKonsoleLuis.innerHTML += element;
+    // delay = 1;
+    // arrayKonsoleLuis.forEach(element => {
+    //     setTimeout(() => {
+    //         sectionKonsoleLuis.innerHTML += element;
             
-        }, 1000 * delay);
+    //     }, 1000 * delay);
 
-        delay++;
-    });
+    //     delay++;
+    // });
 
 
 
