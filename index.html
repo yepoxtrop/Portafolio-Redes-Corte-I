@@ -82,20 +82,27 @@
                 
                 <!-- Descripción detallada del contenido del portafolio -->
                 <p class="introduction-card-description">
-                    Documentación técnica y análisis estructural de arquitecturas de red. Este repositorio detalla la implementación, configuración y optimización de protocolos a través de diferentes topologías a nivel empresarial.
+                    Este portafolio tiene como objetivo documentar nuestro proceso y avance en la asignatura de <strong>Redes de Computadores</strong>, integrando tanto los conocimientos teóricos como las experiencias prácticas adquiridas durante el curso.
                 </p>
+                <p class="introduction-card-description">
+                    Dentro de este espacio encontrará apuntes, actividades y ejercicios prácticos que abarcan temas como el diseño y configuración de redes, el análisis de protocolos de comunicación y la implementación de soluciones tecnológicas. Cada sección busca evidenciar el aprendizaje obtenido y demostrar nuestra capacidad para aplicar los conceptos en escenarios académicos y profesionales.
+                </p>
+                <p class="introduction-card-description">
+                    Además de ello podrá acceder al código fuente de este website y adicional a ello descargalo como un PDF.
+                </p>
+                
                 
                 <!-- Botones de acción (descargar PDF y ver código fuente) -->
                 <div class="introduction-card-buttons-container">
                     <!-- Botón para descargar versión PDF -->
                     <button class="button-pdf">
-                        <img src="./src/media/img/icon/download.svg" alt="vector_descarga" class="svg-download">
+                        <svg class="svg-download" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
                         Convertir a PDF
                     </button>
                     
                     <!-- Botón para ver el código fuente -->
                     <button class="button-source">
-                        <img src="./src/media/img/icon/code.svg" alt="vector_codigo" class="svg-code">
+                        <svg class="svg-code"  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
                         Codigo Fuente
                     </button>
                 </div>
@@ -108,8 +115,9 @@
         <!-- Contiene perfiles de los desarrolladores del proyecto -->
         <div class="home-content-devs-card">
             <!-- Título de la sección -->
-            <div>
+            <div style="display: flex; flex-direction:row; gap:2rem">
                 <h2 class="title-section">> Equipo_de_Trabajo</h2>
+                <h2 class="title-section2">#Los Mejores</h2>
             </div>
 
             <!-- Contenedor con tarjetas de información de cada miembro -->
@@ -148,6 +156,25 @@
                             </div>
                             <div class="card-dev-info">
                                 <h3 class="dev-name">Cesar Esneider Giraldo Avile</h3>
+                                <p class="dev-proffesion">Estudiante de Ingeniería de Sistemas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Santiago Buitrago Burgos -->
+                    <div class="card-dev-container">
+                        <div class="card-dev-header">
+                            <div class="card-dev-img">
+                                <a href="https://github.com/SantiagoBurgos05" target="_blank">
+                                    <img src="./src/media/img/profile/Santiago.png
+                                " alt="img_santiago" class="dev-img">
+                                </a>
+                                <div class="car-dev-rate-assignature">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorem commodi quasi, architecto animi error, eos suscipit beatae nostrum tempora distinctio earum officia odio! Odit fugit quas sapiente ducimus deleniti!</p>
+                                </div>
+                            </div>
+                            <div class="card-dev-info">
+                                <h3 class="dev-name">Santiago Buitrago Burgos</h3>
                                 <p class="dev-proffesion">Estudiante de Ingeniería de Sistemas</p>
                             </div>
                         </div>
@@ -237,9 +264,9 @@
         <!-- Enlaces adicionales -->
         <ul>
             <!-- Enlace al repositorio de documentación en GitHub -->
-            <li><a href="https://github.com/yepoxtrop/Portafolio-Redes-Corte-I" style="text-decoration:none">Documentación</a></li>
+            <li><a href="https://github.com/yepoxtrop/Portafolio-Redes-Corte-I" target="_blank" style="text-decoration:none">Documentación</a></li>
             <!-- Enlace de sorpresas (easter egg) -->
-            <li><a href="#" style="text-decoration:none">Sorpresas</a></li>
+            <li><a href="https://www.youtube.com/watch?v=lLSu0UHNZhU&pp=ygUVbWFwYWNoZSBjb21pZW5kbyB1dmFz" target="_blank" style="text-decoration:none">Sorpresas</a></li>
         </ul>     
     </footer>
 
@@ -248,14 +275,17 @@
         <div class="rate-form-part1">
             <h4 class="rate-form-title">RATE OUR PROJECT</h4>
             <div>
-                <svg class="star-svg" id="star-svg1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#091426"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/></svg>
-                <svg class="star-svg" id="star-svg2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#091426"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/></svg>
-                <svg class="star-svg" id="star-svg3" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#091426"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/></svg>
-                <svg class="star-svg" id="star-svg4" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#091426"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/></svg>
-                <svg class="star-svg" id="star-svg5" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#091426"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/></svg>
+                <svg class="star-svg" id="star-svg1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+                <svg class="star-svg" id="star-svg1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+                <svg class="star-svg" id="star-svg1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+                <svg class="star-svg" id="star-svg1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+                <svg class="star-svg" id="star-svg1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
             </div>
             
-            <button id="send-rate-form"> SEND </button>
+            <button id="send-rate-form">
+                <img src="./src/media/img/icon/send.svg" alt="">
+                <span>SEND</span> 
+            </button>
         </div>
         
     </dialog>
