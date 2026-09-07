@@ -15,6 +15,40 @@
     position: relative;
 }
 
+.text-skull{
+    font-family: "Roboto Mono";
+}
+
+#last-text-skull{
+    margin-bottom: 0.8rem;
+}
+
+.text-skull-error{
+    color: red !important;
+}
+
+#enlarge-btn,
+#close-btn,
+#minimize-btn{
+    cursor: pointer;
+}
+
+.last-text-skull-error{
+    animation: lastTextSkullError 1s ease-in-out infinite alternate;
+}
+
+@keyframes lastTextSkullError {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+.user-line-icon{
+    color: #0226f3;
+}
+
 /* ====================================
    TARJETA DE INTRODUCCIÓN
    ==================================== */
@@ -56,6 +90,18 @@
 .introduction-card-description {
     font-family: var(--font-sans);
     color: var(--color-text-dark);
+}
+
+.konsole-title{
+    margin-bottom: 0.8rem;
+}
+
+.konsole-subtitle{
+    margin-top: 0.8rem;
+}
+
+.konsole-url{
+    color: #00ff22;
 }
 
 /* ====================================
@@ -202,11 +248,18 @@ svg.svg-download{
     background-color: var(--color-bg-light);
     border: 1px var(--color-border) solid;
     padding: 1rem;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 .card-dev-container:hover{
     transform: scale(1.05);
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.skill-card-null-status{
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-light);
 }
 
 .card-dev-header {
@@ -302,6 +355,7 @@ svg.svg-download{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 /* ====================================

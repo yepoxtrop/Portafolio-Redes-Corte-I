@@ -19,3 +19,18 @@ buttonSendRateUs.addEventListener("click", ()=>{
     document.body.style.overflow = '';
     
 })
+
+const buttonMinizeKonsole = document.querySelector("#minimize-btn");
+buttonMinizeKonsole.addEventListener("click", ()=>{
+    window.alert("No puedes minizar la consola")
+})
+
+const buttonCloseKonsole = document.querySelector("#close-btn");
+buttonCloseKonsole.addEventListener("click", ()=>{
+    window.alert("No puedes cerrar la consola")
+})
+
+const buttonEnlargeKonsole = document.querySelector("#enlarge-btn");
+buttonEnlargeKonsole.addEventListener("click", ()=>{
+    window.alert("No puedes agrandar la consola")
+})

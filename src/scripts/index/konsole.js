@@ -1,74 +1,101 @@
-const arrayInitKonsole = [
-    "<span>Welcome to Debiam 13 (GNU/Linux x86_64)</span>",
-    "<span>* Documentation:&emsp;&emsp;<a href='https://www.debian.org/intro/index#community' target='_blank'>https://www.debian.org/intro/index#community</a></span>",
-    "<span>* Management:&emsp;&emsp;&emsp;<a href='https://www.debian.org/intro/people' target='_blank'>https://www.debian.org/intro/people</a></span>",
-    "<span>* Support:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<a href='https://www.debian.org/support' target='_blank'>https://www.debian.org/support</a></span>",
-    `<span>System information as of ${new Date()}</span>`,
-    "<span>System load:&emsp;&emsp;&nbsp;0.16&emsp;&emsp;&emsp;&nbsp;Processes:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;168</span>",
-    "<span>Usage of /:&emsp;&emsp;&emsp;&nbsp;39.7%&emsp;&emsp;of 28.37GB   Users logged in:&emsp;1</span>",
-    "<span>Memory usage:&emsp;66%&emsp;&emsp;&emsp;IPv4 address for eth0:&emsp;&emsp;&emsp;&ensp;&nbsp;192.167.0.11</span>",
-    "<span>Swap usage:&emsp;&emsp;&ensp;9%</span>",
-    "<span>*** System starting right now ***</span>",
-    `<span>Last login: ${new Date()}</span>`,
-]
+"use strict";
 
-const arrayKonsoleLuis = [
-    "<span>User:█</span>",
-    "<span>Password:</span>",
-    "<span>luis@net_archive:~$cat MiExpectativaDeRedes.txt</span>",
-    "<span>[TEXTO]</span>",
-    "<span>luis@net_archive:~$clear",
-    "<span>luis@net_archive:~$su cesar</span>",
-    "<span>password for cesar:</span>",
-]
+import { ARRAY_INIT_KONSOLE, ARRAY_KONSOLE_LUIS, ARRAY_KONSOLE_CESAR, ARRAY_KONSOLE_SANTIAGO, ARRAY_KONSOLE_JHON, ARRAY_KONSOLE_ERROR } from "../consts/konsole.index.js";
 
-const arrayKonsoleCesar = [
-    "<span>cesar@net_archive:~$cat MiExpectativaDeRedes.txt</span>",
-    "<span>[TEXTO]</span>",
-    "<span>cesar@net_archive:~$clear",
-    "<span>cesar@net_archive:~$su santiago</span>",
-    "<span>password for santiago:</span>",
-]
+const SECTION_KONSOLE = document.querySelector(".terminal-body-section1");
+const SECTION_KONSOLE_LUIS = document.querySelector(".terminal-body-luis");
+const SECTION_KONSOLE_CESAR = document.querySelector(".terminal-body-cesar");
+const SECTION_KONSOLE_SANTIAGO = document.querySelector(".terminal-body-santiago");
+const SECTION_KONSOLE_JHON = document.querySelector(".terminal-body-jhon");
 
-const arrayInitSantiago = [
-    "<span>santiago@net_archive:~$cat MiExpectativaDeRedes.txt</span>",
-    "<span>[TEXTO]</span>",
-    "<span>santiago@net_archive:~$clear",
-    "<span>santiago@net_archive:~$exit</span>",
-    "<span>cesargo@net_archive:~$exit</span>",
-    "<span>luis@net_archive:~$poweroff</span>",
-    "<span>...</span>",
-]
-
-function konsole() {
-    const sectionKonsole = document.querySelector(".terminal-body-section1");
-    const sectionKonsoleLuis = document.querySelector(".terminal-body-luis");
-    const sectionKonsoleCesar = document.querySelector(".terminal-body-cesar");
-    const sectionKonsoleSantiago = document.querySelector(".terminal-body-santiago");
-    let delay = 1;
+function konsole(listContent, listObjectsDOM) {
     
-    arrayInitKonsole.forEach(element => {
-        setTimeout(() => {
-            sectionKonsole.innerHTML += element;
+    try {
+
+        if (listContent.length === 0 || listObjectsDOM.length === 0) {
+            document.querySelector(".terminal-container").style.backgroundColor = "#000000"
+            let time = 1;
             
-        }, 1000 * delay);
+            ARRAY_KONSOLE_ERROR.forEach((element)=>{
 
-        delay++;
-    });
+                setTimeout(()=>{
+                    listObjectsDOM[0].innerHTML += element;
+                }, 500*time)
+                time++;
+            })
+            return;
+        }
 
-    // delay = 1;
-    // arrayKonsoleLuis.forEach(element => {
-    //     setTimeout(() => {
-    //         sectionKonsoleLuis.innerHTML += element;
+        // Si ambos array tienen longitudes diferentes
+        if (listContent.length != listObjectsDOM.length ){
+            document.querySelector(".terminal-container").style.backgroundColor = "#000000"
+            let time = 1;
             
-    //     }, 1000 * delay);
+            ARRAY_KONSOLE_ERROR.forEach((element)=>{
 
-    //     delay++;
-    // });
+                setTimeout(()=>{
+                    listObjectsDOM[0].innerHTML += element;
+                }, 500*time)
+                time++;
+            })
+            return;
+        }
 
+        // Funcionamiento normal de la funcion
+        let delay = 1;
+        listObjectsDOM[0].style.display = "flex";
+        listObjectsDOM[0].style.flexDirection = "column";
+        listObjectsDOM[0].style.width = "100%";
+        listObjectsDOM[0].style.marginBottom = "1.5rem";
 
+        listContent[0].forEach((element, index) => {
+        
+            setTimeout(() => {
+                listObjectsDOM[0].innerHTML += element;
+                
+                if (index >= listContent[0].length-1){
+                    setTimeout(()=>{
+                        listObjectsDOM[0].style.display = 'none'
+                    },3000)
+                } 
+            }, 500 * delay);
 
+            delay++;
+        });
+
+        // Recursividad
+        setTimeout(()=>{
+            listContent.shift();
+            listObjectsDOM.shift();
+
+            if (listContent.length === 0 && listObjectsDOM.length === 0) {
+                console.log("Finalizó el ciclo");
+                return;
+            }else{
+                console.log("finalizo el ciclo")
+                konsole(listContent, listObjectsDOM);
+            }
+        }, (listContent[0].length*500)+3500)
+        
+    } catch (error) {
+        console.log(error)
+
+        // Si se presenta un error en la funcion
+        document.querySelector(".terminal-container").style.backgroundColor = "#000000"
+        let time = 1;
+            
+        ARRAY_KONSOLE_ERROR.forEach((element)=>{
+            setTimeout(()=>{
+                document.querySelector(".terminal-body-section1").innerHTML += element;
+            }, 500*time)
+            time++;
+        })
+        return;
+    }
+    
 }
 
-// Ejecuta la función cuando el DOM está listo
-window.addEventListener('DOMContentLoaded', konsole);
+konsole(
+    [ARRAY_INIT_KONSOLE, ARRAY_KONSOLE_LUIS, ARRAY_KONSOLE_CESAR, ARRAY_KONSOLE_SANTIAGO, ARRAY_KONSOLE_JHON],
+    [SECTION_KONSOLE, SECTION_KONSOLE_LUIS, SECTION_KONSOLE_CESAR, SECTION_KONSOLE_SANTIAGO, SECTION_KONSOLE_JHON]
+)
