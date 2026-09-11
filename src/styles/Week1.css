@@ -282,6 +282,27 @@
 header {
     padding: 1rem 3rem !important;
 }
+/* ==========FOOTER========== */
+footer {
+    width: 100%;
+    background-color: var(--color-bg-light);
+    font-family: var(--font-sans);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-top: 1px solid var(--color-border);
+}
+
+/**
+ * Texto de derechos de autor
+ * - Peso bold para énfasis
+ */
+.copy-footer {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-dark);
+}
 
 /* ==========RESPONSIVE========== */
 @media (max-width: 1024px) {
