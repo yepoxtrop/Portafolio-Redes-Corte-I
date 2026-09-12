@@ -310,7 +310,7 @@ header {
 /* La caja blanca del contenido */
 .modal-contenido {
     background-color: var(--surface-container-lowest);
-    margin: 5% auto; /* Centrado en la pantalla con un margen superior */
+    margin: 5% auto; 
     padding: 2.5rem;
     border: 1px solid var(--outline-variant);
     border-radius: var(--radius-lg);
@@ -318,6 +318,9 @@ header {
     max-width: 750px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     position: relative;
+
+    max-height: 85vh; /* La caja no ocupará más del 85% del alto de la pantalla */
+    overflow-y: auto; /* Si el contenido sobrepasa ese 85%, aparece el scroll interno */
     
     /* Animación de entrada */
     animation: deslizarModal 0.3s ease-out;
