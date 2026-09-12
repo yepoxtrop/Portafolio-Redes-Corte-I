@@ -420,3 +420,13 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ---------- Premisa: usa la misma grilla de capturas, en una sola columna ---------- */
+
+.captures-grid.single{
+    grid-template-columns: 1fr;
+}
+
+.capture-slot.premisa-slot img{
+    max-height: 900px;
+}
