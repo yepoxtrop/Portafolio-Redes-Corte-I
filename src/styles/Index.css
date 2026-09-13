@@ -109,7 +109,7 @@
    ==================================== */
 
 .introduction-card-buttons-container {
-    width: 35%;
+    width: min(100%, 38rem);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
@@ -344,6 +344,7 @@ svg.svg-download{
 
 .terminal-body {
     width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -484,6 +485,157 @@ svg.svg-download{
 }
 
 /* ====================================
+   ADAPTACIÓN A PANTALLAS
+   ==================================== */
+
+/* El segundo contenedor es la fila de perfiles y terminal del HTML. */
+.home-content-devs-card > div:nth-child(2) {
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.home-content-devs-card > div:nth-child(2) > .home-content-devs-info {
+    flex: 1 1 19rem;
+    width: auto;
+    min-width: 0;
+}
+
+.home-content-devs-card > div:nth-child(2) > .terminal-container {
+    flex: 2 1 32rem;
+    width: auto;
+    min-width: 0;
+}
+
+@media (min-width: 1440px) {
+    #body-content {
+        padding-left: clamp(3rem, 8vw, 10rem);
+        padding-right: clamp(3rem, 8vw, 10rem);
+    }
+}
+
+@media (max-width: 1024px) {
+    #body-content {
+        padding: var(--spacing-xl);
+    }
+
+    #skills-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    #body-content {
+        padding: var(--spacing-lg) var(--spacing-md);
+        gap: var(--spacing-xl);
+    }
+
+    .introduction-card-title,
+    .title-section,
+    .title-section2 {
+        overflow-wrap: anywhere;
+    }
+
+    .introduction-card-container-info {
+        gap: var(--spacing-md);
+    }
+
+    .introduction-card-buttons-container {
+        width: 100%;
+        gap: var(--spacing-sm);
+    }
+
+    .button-pdf,
+    .button-source {
+        min-width: 0;
+        padding: var(--spacing-sm);
+        overflow-wrap: anywhere;
+    }
+
+    .home-content-devs-card > div:first-child {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm) !important;
+    }
+
+    .home-content-devs-card > div:nth-child(2) {
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: var(--spacing-lg) !important;
+    }
+
+    .home-content-devs-card > div:nth-child(2) > .home-content-devs-info,
+    .home-content-devs-card > div:nth-child(2) > .terminal-container {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .card-dev-info {
+        min-width: 0;
+    }
+
+    .dev-name,
+    .dev-proffesion,
+    .terminal-header span,
+    .terminal-container span {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    #skills-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .skill-card:hover,
+    .card-dev-container:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .introduction-card-buttons-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-dev-header {
+        align-items: flex-start;
+    }
+
+    .card-dev-img {
+        width: 25%;
+        flex: 0 0 25%;
+    }
+
+    .terminal-header {
+        padding: var(--spacing-sm);
+    }
+
+    .terminal-header-icon {
+        gap: 0.25rem;
+    }
+
+    .terminal-body {
+        padding: var(--spacing-sm);
+    }
+
+    dialog.active-modal {
+        max-width: calc(100vw - 2rem);
+        padding: var(--spacing-md);
+    }
+
+    .rate-form-title {
+        font-size: 1.35rem;
+        text-align: center;
+    }
+
+    .star-svg {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
+
+/* ====================================
    BARRAS DE PROGRESO
    ==================================== */
 
@@ -571,7 +723,3 @@ dialog.active-modal .rate-form-part1 {
     width: 3rem;
     height: 3rem;
 }
-
-/* ====================================
-   ANIMACIONES Y RESPONSIVE
-   ==================================== */
