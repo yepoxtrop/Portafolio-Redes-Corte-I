@@ -154,6 +154,14 @@ header {
     z-index: 10;
 }
 
+header h1,
+header nav,
+header nav ul,
+footer,
+footer ul {
+    min-width: 0;
+}
+
 /**
  * Título principal del header
  * - Familia de fuente monoespaciada
@@ -226,6 +234,25 @@ header nav button {
  */
 header nav button:hover {
     opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none;
+    width: 2.75rem;
+    height: 2.5rem;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-tertiary);
+    background-color: var(--color-bg-light);
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 4px 0;
+    background-color: var(--color-tertiary);
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 /* ====================================
@@ -315,4 +342,99 @@ footer ul li a {
  */
 footer ul li a:hover, header ul li a:hover {
     color: var(--color-secondary);
+}
+
+/* ====================================
+   ADAPTACIÓN A PANTALLAS
+   ==================================== */
+
+@media (max-width: 1100px) {
+    header,
+    footer {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+    }
+
+    header {
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    header,
+    footer {
+        padding: var(--spacing-md);
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex: 0 0 auto;
+    }
+
+    header h1 {
+        width: 100%;
+        overflow-wrap: anywhere;
+        font-size: clamp(1rem, 4vw, 1.35rem);
+    }
+
+    header nav {
+        display: none;
+        flex: 1 1 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-md);
+    }
+
+    header nav.is-open {
+        display: flex;
+    }
+
+    header nav ul {
+        align-items: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    header nav ul li,
+    header nav ul li a {
+        width: 100%;
+    }
+
+    header nav button {
+        align-self: flex-start;
+    }
+
+    .menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    footer ul {
+        flex-wrap: wrap;
+    }
 }

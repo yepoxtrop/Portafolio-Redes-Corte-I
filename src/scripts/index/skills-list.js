@@ -1,3 +1,5 @@
+"use strict";
+
 import { SKILLS } from "../consts/skills.index.js";
 
 function loadSkills(){
@@ -33,4 +35,6 @@ function loadSkills(){
 
 }
 
-loadSkills();
+document.addEventListener("DOMContentLoaded", () => {
+    loadSkills();
+});
