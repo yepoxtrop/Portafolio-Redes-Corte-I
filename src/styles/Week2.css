@@ -430,3 +430,44 @@
 .capture-slot.premisa-slot img{
     max-height: 900px;
 }
+
+/* Pegar al final de src/styles/Week2.css. */
+.p2m-seccion { color: #11213b; }
+.p2m-seccion h2 { font-size: clamp(22px, 3vw, 30px); }
+.p2m-botones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.p2m-acceso { display: grid; gap: 10px; width: 100%; padding: 25px; border: 2px solid #085ac0; border-radius: 14px; background: #085ac0; color: #fff; text-align: left; font: inherit; cursor: pointer; box-shadow: 0 8px 20px #085ac024; }
+.p2m-acceso span { font: 600 12px/1.5 "JetBrains Mono", monospace; letter-spacing: .06em; }
+.p2m-acceso strong { font-size: 27px; }
+.p2m-acceso small { font-size: 14px; line-height: 1.5; }
+.p2m-acceso-secundario { background: #11213b; border-color: #11213b; }
+.p2m-acceso:hover { filter: brightness(1.12); }
+.p2m-seccion :focus-visible { outline: 3px solid #d67400; outline-offset: 4px; }
+.p2m-modal { box-sizing: border-box; width: min(1180px, 96vw); height: min(1100px, 94vh); height: min(1100px, 94dvh); max-width: 96vw; max-height: 94vh; max-height: 94dvh; padding: 0; margin: auto; border: 1px solid #b8cbe2; border-radius: 16px; background: #fff; color: #11213b; overflow: hidden; box-shadow: 0 24px 90px #0006; }
+.p2m-modal::backdrop { background: #081323db; }
+.p2m-ventana { height: 100%; min-height: 0; display: flex; flex-direction: column; }
+.p2m-barra { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 22px; background: #11213b; color: #fff; }
+.p2m-barra h3 { font: 700 clamp(16px, 2vw, 22px)/1.4 "Inter", sans-serif; margin: 0; }
+.p2m-barra p { margin: 4px 0 0; color: #b9cfea; font-size: 12px; }
+.p2m-cerrar { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; border: 1px solid #68809d; border-radius: 9px; background: #ffffff12; color: #fff; cursor: pointer; font: 32px/1 Arial, sans-serif; }
+.p2m-cerrar:hover { background: #ffffff2a; }
+.p2m-herramientas { flex: 0 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 14px 22px; background: #edf3fc; border-bottom: 1px solid #cbd9ea; font-size: 14px; }
+.p2m-herramientas span { flex: 1 1 200px; color: #52657d; }
+.p2m-herramientas a { color: #085ac0; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; padding: 6px 0; }
+.p2m-scroll { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; background: #f2f6fc; }
+.p2m-infografia { display: block; width: 100%; max-width: none; height: auto; margin: 0; }
+.p2m-lectura { padding: clamp(20px, 4vw, 42px); font-size: 16px; line-height: 1.75; }
+.p2m-lectura h4 { font-size: clamp(25px, 4vw, 36px); line-height: 1.2; margin: 0 0 20px; }
+.p2m-lectura p { margin: 0 0 18px; }
+.p2m-lectura details { margin: 12px 0; border: 1px solid #c8d7eb; border-radius: 10px; background: #fff; }
+.p2m-lectura summary { padding: 16px 20px; font-weight: 700; cursor: pointer; color: #085ac0; }
+.p2m-lectura details p { padding: 0 20px 18px; margin: 0; }
+@media (max-width: 640px) {
+  .p2m-botones { grid-template-columns: 1fr; }
+  .p2m-acceso { padding: 20px; }
+  .p2m-barra { padding: 12px; }
+  .p2m-herramientas { padding: 10px 14px; gap: 4px 20px; font-size: 13px; }
+  .p2m-herramientas span { flex-basis: 100%; }
+}
+
+#p2m-premisa2 .p2m-embed-container { display: flex; overflow: hidden; padding: 0; }
+#p2m-premisa2 .p2m-embed { display: block; flex: 1; width: 100%; height: 100%; min-height: 0; border: 0; background: #f4f7ff; }
