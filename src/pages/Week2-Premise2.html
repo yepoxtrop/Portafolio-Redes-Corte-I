@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../styles/Week2-Premise2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connected Is Not Enough | Week 2</title>
+  </head>
+  <body data-motion="off">
+    <main class="shell">
+      <div class="topline">
+        <span class="brand">NET_ARCHIVE / WEEK 02</span
+        ><button class="motion" id="motion" aria-pressed="false" hidden>
+          Motion: off
+        </button>
+      </div>
+      <section class="hero" aria-labelledby="title">
+        <span class="kicker"
+          ><span class="dot" aria-hidden="true"></span>A NETWORK CHECK-UP</span
+        >
+        <h1 id="title">Connected?<br /><em>Not enough.</em></h1>
+        <p class="hero-copy">
+          Full Wi-Fi bars. Frozen classes. Frustrated people.<br />Let’s find
+          out what makes a network actually good.
+        </p>
+        <div class="hero-bottom">
+          <a class="jump" href="#audit">Explore the 7 essentials ↓</a>
+          <div class="stickers" aria-hidden="true">
+            <span class="hero-sticker">📶</span
+            ><span class="hero-sticker">🛠️</span
+            ><span class="hero-sticker">💡</span>
+          </div>
+        </div>
+      </section>
+      <section class="case" aria-labelledby="case-title">
+        <div class="case-copy">
+          <span class="label">MEET OUR HYPOTHETICAL SCHOOL</span>
+          <h2 id="case-title">Welcome to<br />New Horizon School.</h2>
+          <p>
+            Everyone can connect to the Internet. But busy classrooms struggle,
+            access controls are weak and one device can bring important services
+            down.
+          </p>
+          <p>
+            <strong>Our challenge:</strong> look beyond “it connects” and
+            explain what should improve — and why.
+          </p>
+          <p class="note">
+            An imagined case, not a report of measured results.
+          </p>
+        </div>
+        <div class="scene" aria-label="Illustrative user comments">
+          <div class="bubble">
+            <span aria-hidden="true">🙋</span>“My class keeps freezing!”
+          </div>
+          <div class="bubble">
+            <span aria-hidden="true">🧑‍🏫</span>“The platform won’t open.”
+          </div>
+          <div class="bubble">
+            <span aria-hidden="true">🧑‍💻</span>“What happens if this device
+            fails?”
+          </div>
+        </div>
+      </section>
+      <section id="audit" aria-labelledby="audit-title">
+        <div class="audit-heading">
+          <div>
+            <span class="label">SEVEN ESSENTIALS / ONE BETTER EXPERIENCE</span>
+            <h2 id="audit-title">Give the network a check-up.</h2>
+            <p>
+              Open any card to see the impact, our recommendation and how we
+              would verify it.
+            </p>
+          </div>
+        </div>
+        <div
+          class="controls"
+          id="view-controls"
+          role="group"
+          aria-label="Compare the problems and proposed improvements"
+          hidden
+        >
+          <button type="button" data-view="problem" aria-pressed="true">
+            ☁ The problems</button
+          ><button type="button" data-view="proposal" aria-pressed="false">
+            ☀ Our proposals
+          </button>
+        </div>
+        <p
+          class="view-status"
+          id="view-status"
+          role="status"
+          aria-live="polite"
+        >
+          Showing problems in our hypothetical school network.
+        </p>
+        <div class="grid">
+          <article class="audit-card blue" data-card="connectivity">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🔌</span
+              ><span class="card-number">01 / 07</span>
+            </div>
+            <h3>Connectivity</h3>
+            <p class="card-question">Can we reach it?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                Connected to Wi-Fi. Still cannot open the classroom platform.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    Students cannot access lessons even when their device says
+                    “connected”.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Check the link, IP address, subnet mask, default gateway and
+                    DNS. Then test the actual learning platform.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Test the gateway, the destination by IP, name resolution and
+                    the application. Record exactly which step fails.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> A successful ping checks
+                  reachability; it does not prove that a website or login works.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="audit-card purple" data-card="performance">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🚀</span
+              ><span class="card-number">02 / 07</span>
+            </div>
+            <h3>Performance</h3>
+            <p class="card-question">Can it keep up?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                The class gets busy. The video call freezes.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    Teachers repeat explanations and students miss parts of the
+                    lesson.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Compare demand during quiet and busy periods. Check link use
+                    and Wi-Fi capacity, then size or prioritise resources where
+                    justified.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Measure latency, packet loss and useful throughput under
+                    representative loads. Set targets based on the applications.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> More Internet bandwidth will
+                  not fix every overloaded access point or local link.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="audit-card pink" data-card="security">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🔒</span
+              ><span class="card-number">03 / 07</span>
+            </div>
+            <h3>Security</h3>
+            <p class="card-question">Who gets access?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                Guests and school staff share a network with weak access
+                controls.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    School information may be exposed to people who should not
+                    access it.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Separate user groups with VLANs, control traffic between
+                    them and protect accounts and management access.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Test an allowed connection and a blocked one. Confirm that
+                    guests can use approved services without reaching staff
+                    resources.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> VLAN separation alone is not
+                  a complete security policy.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="audit-card orange" data-card="availability">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🛟</span
+              ><span class="card-number">04 / 07</span>
+            </div>
+            <h3>Availability</h3>
+            <p class="card-question">What if it breaks?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                One central device fails. Important services stop.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    Classes and office tasks can stop while the team tries to
+                    recover.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Identify single points of failure. Evaluate backup power,
+                    configuration backups and redundancy according to service
+                    impact and budget.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Plan a controlled failure exercise. Record which services
+                    remain available and how long recovery takes.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> A spare device helps only if
+                  the team knows how to restore the service.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="audit-card green" data-card="scalability">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🌱</span
+              ><span class="card-number">05 / 07</span>
+            </div>
+            <h3>Scalability</h3>
+            <p class="card-question">Room to grow?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                A new classroom opens. Ports, addresses or capacity run short.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    New users may experience delays or require disruptive
+                    changes to the network.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Plan address space, spare ports and capacity for expected
+                    growth. Use a phased expansion plan.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Estimate demand for another classroom and test the proposed
+                    configuration before rollout.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> Growth planning balances
+                  future needs with today’s budget; it is not simply buying
+                  everything now.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="audit-card blue" data-card="management">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🧰</span
+              ><span class="card-number">06 / 07</span>
+            </div>
+            <h3>Management</h3>
+            <p class="card-question">Can we maintain it?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                A setting changed. Nobody knows what changed or why.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    The team loses time guessing, and a small incident can last
+                    much longer.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Keep an inventory, clear device names, configuration backups
+                    and a change log. Record responsibilities and diagnostic
+                    steps.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Use the documentation to locate a fault. Test a
+                    configuration restore in a safe environment.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> Clear records help the next
+                  person solve the problem without starting from zero.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="audit-card purple" data-card="experience">
+            <div class="card-top">
+              <span class="sticker" aria-hidden="true">🙂</span
+              ><span class="card-number">07 / 07</span>
+            </div>
+            <h3>User Experience</h3>
+            <p class="card-question">Does it help people?</p>
+            <div class="snapshot">
+              <span class="snapshot-label">THE PROBLEM</span>
+              <p class="snapshot-text">
+                Technical checks look fine. Students still cannot finish their
+                tasks.
+              </p>
+            </div>
+            <details>
+              <summary>Look closer <span aria-hidden="true">＋</span></summary>
+              <div class="card-details">
+                <section>
+                  <h4>💬 Why it matters</h4>
+                  <p>
+                    Users lose time, confidence and access to learning
+                    opportunities.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔧 Our proposal</h4>
+                  <p>
+                    Try logging in, uploading assignments and joining a class
+                    call. Ask students, teachers and staff about their
+                    experience.
+                  </p>
+                </section>
+                <section>
+                  <h4>🔎 How we would check</h4>
+                  <p>
+                    Record task completion, interruptions and user feedback
+                    during typical busy periods.
+                  </p>
+                </section>
+                <p class="small-thought">
+                  <strong>Think about it:</strong> The goal is a usable service,
+                  not just a green status light.
+                </p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+      <section class="plan" aria-labelledby="plan-title">
+        <span class="label">OKAY… WHAT SHOULD WE DO FIRST?</span>
+        <h2 id="plan-title">Smart priorities. Realistic budget.</h2>
+        <p>
+          We cannot upgrade everything at once. For this case, we would start
+          with the biggest risks and then use evidence to guide spending.
+        </p>
+        <div class="priorities">
+          <details class="priority" open>
+            <summary>
+              🔐 First: protect access &amp; understand the slowdown
+            </summary>
+            <p>
+              <strong>Why first?</strong> Information exposure deserves prompt
+              attention, while interrupted classes directly affect learning. We
+              would review access controls and measure the busy-period
+              bottleneck before buying equipment.
+            </p>
+          </details>
+          <details class="priority">
+            <summary>🛟 Next: make recovery possible</summary>
+            <p>
+              <strong>Why next?</strong> A central failure can affect many
+              users. We would document and back up configurations, test recovery
+              and compare the cost of backup power or redundancy with the impact
+              of downtime. A critical availability risk could move this work to
+              first priority.
+            </p>
+          </details>
+          <details class="priority">
+            <summary>🌱 Then: prepare for growth &amp; keep listening</summary>
+            <p>
+              <strong>Why then?</strong> More students need more resources, but
+              unused capacity also costs money. We would plan expansion in
+              stages, maintain documentation and keep checking real tasks and
+              user feedback. These checks continue throughout every phase.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="verdict" aria-labelledby="verdict-title">
+        <span class="label">OUR VERDICT</span>
+        <h2 id="verdict-title">
+          A good network works for people.<br />Not just for devices.
+        </h2>
+        <p>
+          Internet access is only the starting point. A good solution combines
+          connectivity, performance, security, availability, scalability,
+          management and a positive user experience.
+        </p>
+        <p>
+          <strong>Our reflection:</strong> as future systems engineers, we would
+          avoid calling a network “good” after a single successful test. We
+          would ask who uses it, what can fail and what evidence supports our
+          decisions.
+        </p>
+        <p>
+          <strong>Next step:</strong> validate the proposals with authorised
+          tests and real user feedback. No improvements or test results are
+          claimed here.
+        </p>
+      </section>
+      <footer>
+        Week 2 · Local Premise 2 · Course guide: Premise 4, “A network that
+        works… is it necessarily a good network?”<br />Interactive visual audit
+        in English. Hypothetical case and proposed analysis created with AI
+        assistance; to be reviewed and adapted by the student team.
+      </footer>
+    </main>
+    
+  </body>
+</html>
