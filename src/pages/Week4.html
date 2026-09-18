@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="NET_ARCHIVE" />
+    <link rel="icon" href="../media/img/icon/network.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/General.css" />
+    <link rel="stylesheet" href="../styles/Week4.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Semana 4 // NET_ARCHIVE</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1 id="header-title">NET_ARCHIVE // PORTAFOLIO</h1>
+      <nav id="title-nav">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="./Week1.html">Week 1</a></li>
+          <li><a href="./Week2.html">Week 2</a></li>
+          <li><a href="./Week3.html">Week 3</a></li>
+          <li><a href="./Week4.html">Week 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="body-content">
+      <div class="week4-content">
+        <section class="week4-intro" aria-labelledby="week4-title">
+          <div class="intro-copy">
+            <span class="node-badge"><span class="dot"></span>OSI_NODE_04 // SIGNAL_PATH</span>
+            <p class="eyebrow">SEMANA 04 / INFRAESTRUCTURA</p>
+            <h2 id="week4-title">Donde los bits toman forma</h2>
+            <p class="intro-text">
+              La capa física convierte los bits en señales que viajan por un medio. La capa de enlace organiza esas señales en tramas, identifica vecinos y decide cuándo puede hablar cada dispositivo.
+            </p>
+            <a class="jump-link" href="#capas">EXPLORAR LAS CAPAS <span aria-hidden="true">-&gt;</span></a>
+          </div>
+          <div class="signal-board" aria-label="Representación visual de una señal de red">
+            <div class="board-header"><span>LINK_MONITOR</span><strong>UP</strong></div>
+            <div class="signal-grid">
+              <span class="signal-label">TX</span>
+              <div class="signal-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="signal-label">RX</span>
+            </div>
+            <div class="board-readout"><span>MEDIA</span><strong>UTP / 1000BASE-T</strong><span>ENCODING</span><strong>4D-PAM5</strong></div>
+          </div>
+        </section>
+
+        <section id="capas" class="layer-layout" aria-label="Capas física y enlace de datos">
+          <article class="layer-panel physical-panel">
+            <div class="layer-panel-top"><span class="layer-number">01</span><span class="layer-status">LAYER_01 // PHYSICAL</span></div>
+            <h3>La capa física</h3>
+            <p>Transporta una secuencia de bits mediante impulsos eléctricos, pulsos de luz u ondas de radio. No interpreta el significado del mensaje: define cómo se representa y cómo cruza el medio.</p>
+            <div class="spec-list">
+              <div><span>UNIDAD</span><strong>BIT</strong></div>
+              <div><span>SEÑAL</span><strong>ELÉCTRICA / ÓPTICA / RADIO</strong></div>
+              <div><span>ELEMENTOS</span><strong>CABLE, CONECTOR, ANTENA</strong></div>
+            </div>
+            <div class="media-stack" aria-label="Medios de transmisión">
+              <div class="media-card"><span class="media-icon copper">01</span><div><strong>Par trenzado</strong><small>UTP / STP - Ethernet</small></div></div>
+              <div class="media-card"><span class="media-icon fiber">02</span><div><strong>Fibra óptica</strong><small>Monomodo / multimodo</small></div></div>
+              <div class="media-card"><span class="media-icon radio">03</span><div><strong>Radiofrecuencia</strong><small>Wi-Fi - comunicación inalámbrica</small></div></div>
+            </div>
+          </article>
+
+          <article class="layer-panel data-link-panel">
+            <div class="layer-panel-top"><span class="layer-number">02</span><span class="layer-status">LAYER_02 // DATA LINK</span></div>
+            <h3>La capa de enlace de datos</h3>
+            <p>Usa los bits recibidos para formar tramas y entregar datos entre nodos vecinos. Controla el acceso al medio, detecta errores y trabaja con direcciones físicas.</p>
+            <div class="frame-preview" aria-label="Anatomía de una trama Ethernet">
+              <div class="frame-caption"><span>ETHERNET_FRAME</span><span>1518 BYTES MAX</span></div>
+              <div class="frame-bar"><span>PREÁMBULO</span><span>MAC DESTINO</span><span>MAC ORIGEN</span><span>TIPO</span><span>DATOS</span><span>FCS</span></div>
+              <div class="frame-width"><span>SYNC</span><i></i><span>HEADER</span><i></i><span>PAYLOAD</span><i></i><span>CHECK</span></div>
+            </div>
+            <div class="link-facts"><div><span>PDU</span><strong>TRAMA</strong></div><div><span>DIRECCIÓN</span><strong>MAC</strong></div><div><span>DISPOSITIVO</span><strong>SWITCH</strong></div></div>
+          </article>
+        </section>
+
+        <section class="encapsulation-section" aria-labelledby="encapsulation-title">
+          <div class="section-heading"><span>&gt; Recorrido_de_la_información</span><h3 id="encapsulation-title">De la señal a la trama</h3><p>Una misma comunicación cambia de representación al atravesar las capas inferiores del modelo OSI.</p></div>
+          <div class="encapsulation-flow">
+            <div class="flow-step"><span class="flow-index">A</span><strong>Datos</strong><small>Mensaje original</small></div>
+            <b aria-hidden="true">+</b>
+            <div class="flow-step active"><span class="flow-index">B</span><strong>Trama</strong><small>MAC + datos + FCS</small></div>
+            <b aria-hidden="true">+</b>
+            <div class="flow-step signal-step"><span class="flow-index">C</span><strong>Bits</strong><small>Señales en el medio</small></div>
+          </div>
+        </section>
+
+        <section class="field-section" aria-labelledby="field-title">
+          <div class="section-heading"><span>&gt; Campo_de_diagnóstico</span><h3 id="field-title">¿Qué puede salir mal?</h3></div>
+          <div class="diagnostic-grid">
+            <article><span class="diagnostic-code">PHYSICAL_01</span><h4>Sin enlace</h4><p>Revisa alimentación, cableado, conectores, velocidad y estado de la interfaz.</p><code>show interfaces status</code></article>
+            <article><span class="diagnostic-code">DATA_LINK_02</span><h4>Tramas descartadas</h4><p>Comprueba errores de CRC, colisiones, dúplex y la negociación entre puertos.</p><code>show interfaces counters</code></article>
+            <article><span class="diagnostic-code">DATA_LINK_03</span><h4>Destino desconocido</h4><p>La tabla MAC permite al switch aprender por qué puerto está cada dispositivo.</p><code>show mac address-table</code></article>
+          </div>
+        </section>
+
+        <section class="takeaway" aria-label="Idea clave de la semana">
+          <span class="takeaway-mark">KEY_TAKEAWAY</span>
+          <p>La capa física mueve la señal. La capa de enlace le da estructura, identidad y control.</p>
+          <span class="takeaway-signature">OSI / 01 + 02</span>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <span class="copy-footer">&copy; 2026 NET_ARCHIVE // PORTAFOLIO. Todos los derechos reservados.</span>
+      <ul>
+        <li><a href="https://github.com/yepoxtrop/Portafolio-Redes-Corte-I" target="_blank" rel="noopener noreferrer">Documentación</a></li>
+        <li><a href="./Surprise.html">Sorpresas</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

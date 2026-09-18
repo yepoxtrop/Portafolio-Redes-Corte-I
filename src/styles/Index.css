@@ -6,6 +6,11 @@
    CONTENEDOR PRINCIPAL
    ==================================== */
 
+@keyframes indexReveal {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 #body-content {
     gap: var(--spacing-2xl);
 }
@@ -61,6 +66,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    animation: indexReveal 0.65s ease both;
 }
 
 .introduction-card-title-container {
@@ -215,6 +221,7 @@ svg.svg-download{
     flex-direction: column;
     gap: 1rem;
     background-color: var(--color-bg-card);
+    animation: indexReveal 0.65s 0.12s ease both;
 }
 
 .title-section {
@@ -320,6 +327,12 @@ svg.svg-download{
     width: 70%;
     background-color: #1E293B;
     flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.terminal-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 5px 0 rgba(197, 198, 205, 0.8);
 }
 
 .terminal-container span {
@@ -368,6 +381,7 @@ svg.svg-download{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    animation: indexReveal 0.65s 0.24s ease both;
 }
 
 .issues-title {
@@ -393,11 +407,22 @@ svg.svg-download{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     
 }
 
 .skill-card:hover{
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 4px 5px 0 rgba(197, 198, 205, 0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 .skill-card-sub {
