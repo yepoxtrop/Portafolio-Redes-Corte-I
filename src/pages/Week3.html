@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3 // NET_ARCHIVE</title>
+    <!-- Enlaces a tus hojas de estilo -->
+    <link rel="stylesheet" href="../styles/General.css">
+    <link rel="stylesheet" href="../styles/Week3.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--encabezado general-->
+    <header id="header">
+        <h1 id="header-title">NET_ARCHIVE // PORTAFOLIO</h1>
+
+        <!-- Barra de navegación con enlaces a las páginas principales -->
+        <nav id="title-nav">
+            <ul>
+                <!-- Enlaces de navegación a cada semana del proyecto -->
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="./Week1.html">Week 1</a></li>
+                <li><a href="./Week2.html">Week 2</a></li>
+                <li><a href="./Week3.html">Week 3</a></li>
+                <li><a href="./Week4.html">Week 4</a></li>
+                <li><a href="./Week5.html">Week 5</a></li>
+            </ul>
+            <!-- Botón de evaluación/calificación -->
+            <button id="rate-button">RATE US</button>
+        </nav>
+    </header>
+
+    <main id="body-content">
+        <!--==========================PRIMER APARTADO==========================-->
+        <div class="contenido-semana">
+            <h1>Semana 3: Modelos y Medios de Transmisión</h1>
+
+            <!--  Tabla Comparativa OSI vs TCP/IP -->
+            <section class="seccion-tema">
+                <h2>El modelo OSI y TCP/IP</h2>
+                <div class="contenedor-tabla">
+                    <table class="tabla-modelos">
+                        <caption>Equivalencia entre modelos de red y sus PDUs</caption>
+                        <thead>
+                            <tr>
+                                <th>Modelo OSI</th>
+                                <th>Modelo TCP/IP</th>
+                                <th>PDU (Unidad de Datos)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Fila 1: Ocupará 3 espacios en la columna de TCP/IP -->
+                            <tr>
+                                <td>7. Aplicación</td>
+                                <td rowspan="3" class="celda-agrupada">4. Aplicación</td>
+                                <td rowspan="3">Datos</td>
+                            </tr>
+                            <tr>
+                                <td>6. Presentación</td>
+                            </tr>
+                            <tr>
+                                <td>5. Sesión</td>
+                            </tr>
+
+                            <!-- Fila 2: Capa de Transporte -->
+                            <tr>
+                                <td>4. Transporte</td>
+                                <td>3. Transporte</td>
+                                <td>Segmento o Datagrama</td>
+                            </tr>
+
+                            <!-- Fila 3: Capa de Red -->
+                            <tr>
+                                <td>3. Red</td>
+                                <td>2. Internet</td>
+                                <td>Paquete</td>
+                            </tr>
+
+                            <!-- Fila 4: Ocupará 2 espacios en la columna de TCP/IP -->
+                            <tr>
+                                <td>2. Enlace de Datos</td>
+                                <td rowspan="2" class="celda-agrupada">1. Acceso a la Red</td>
+                                <td>Trama (Frame)</td>
+                            </tr>
+                            <tr>
+                                <td>1. Física</td>
+                                <td>Bits</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 2. Capas TCP/IP y Protocolos -->
+            <section class="seccion-tema">
+                <h2>Capas de la Familia de Protocolos TCP/IP</h2>
+                <div class="grid-capas">
+                    <article class="tarjeta-capa">
+                        <h3>Aplicación</h3>
+                        <p>Representa los datos para el usuario y controla la codificación y el control de diálogo.</p>
+                        <span class="protocolos">HTTP, DNS, DHCP, FTP</span>
+                    </article>
+                    <article class="tarjeta-capa">
+                        <h3>Transporte</h3>
+                        <p>Admite la comunicación entre distintos dispositivos a través de diversas redes.</p>
+                        <span class="protocolos">TCP, UDP</span>
+                    </article>
+                    <article class="tarjeta-capa">
+                        <h3>Internet</h3>
+                        <p>Determina la mejor ruta a través de la red para enviar los paquetes.</p>
+                        <span class="protocolos">IPv4, IPv6, ICMP</span>
+                    </article>
+                    <article class="tarjeta-capa">
+                        <h3>Acceso a la Red</h3>
+                        <p>Controla los dispositivos de hardware y los medios que forman la red.</p>
+                        <span class="protocolos">Ethernet, WLAN (Wi-Fi), ARP</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 3. Proceso de Comunicación (Tarjetas con Flechas) -->
+            <section class="seccion-tema">
+                <h2>Procesos de Comunicación TCP/IP</h2>
+                <div class="flujo-comunicacion">
+                    <article class="paso-flujo">
+                        <h3>1. Creación de Datos</h3>
+                        <p>La aplicación genera los datos a enviar.</p>
+                    </article>
+                    <div class="flecha-indicadora">&#10142;</div>
+
+                    <article class="paso-flujo">
+                        <h3>2. Encapsulamiento</h3>
+                        <p>Los datos bajan por las capas agregando encabezados (Segmento, Paquete, Trama).</p>
+                    </article>
+                    <div class="flecha-indicadora">&#10142;</div>
+
+                    <article class="paso-flujo">
+                        <h3>3. Transmisión</h3>
+                        <p>La trama se convierte en bits para viajar por los medios físicos.</p>
+                    </article>
+                    <div class="flecha-indicadora">&#10142;</div>
+
+                    <article class="paso-flujo">
+                        <h3>4. Desencapsulamiento</h3>
+                        <p>El destino recibe, lee y elimina los encabezados al subir por las capas.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 4. Medios de Transmisión -->
+            <section class="seccion-tema">
+                <h2>Medios de Transmisión</h2>
+
+                <div class="medios-intro">
+                    <p>Los medios de transmisión son las vías por las cuales se comunican los datos. Se dividen
+                        principalmente en dos categorías según la forma en que confinan la señal: los
+                        <strong>guiados</strong> (cables físicos que dirigen la señal) y los <strong>no guiados</strong>
+                        (ondas electromagnéticas que viajan por el aire o el vacío).
+                    </p>
+                </div>
+
+                <div class="medios-grid">
+                    <!-- Columna Izquierda: Guiados -->
+                    <div class="columna-medios">
+                        <h3 class="titulo-medios">Guiados (Alámbricos)</h3>
+                        <article class="tarjeta-medio">
+                            <h4>Cable Par Trenzado (UTP/STP)</h4>
+                            <p>Económico, usado en redes LAN. Vulnerable a interferencias si no está blindado.</p>
+                        </article>
+                        <article class="tarjeta-medio">
+                            <h4>Cable Coaxial</h4>
+                            <p>Mayor ancho de banda que el par trenzado. Usado comúnmente en televisión y proveedores de
+                                internet.</p>
+                        </article>
+                        <article class="tarjeta-medio">
+                            <h4>Fibra Óptica</h4>
+                            <p>Transmite datos mediante pulsos de luz. Inmune a interferencias electromagnéticas,
+                                alcanza distancias muy largas.</p>
+                        </article>
+                    </div>
+
+                    <!-- Columna Derecha: No Guiados -->
+                    <div class="columna-medios">
+                        <h3 class="titulo-medios">No Guiados (Inalámbricos)</h3>
+                        <article class="tarjeta-medio">
+                            <h4>Ondas de Radio (Wi-Fi, Bluetooth)</h4>
+                            <p>Viajan largas distancias y penetran paredes. Son la base de las redes inalámbricas
+                                locales y personales.</p>
+                        </article>
+                        <article class="tarjeta-medio">
+                            <h4>Microondas</h4>
+                            <p>Requieren línea de visión directa entre antenas. Usadas en comunicaciones satelitales y
+                                enlaces punto a punto.</p>
+                        </article>
+                        <article class="tarjeta-medio">
+                            <h4>Infrarrojo</h4>
+                            <p>Corta distancia y no atraviesan obstáculos sólidos. Usado en controles remotos y
+                                comunicación entre dispositivos cercanos.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--==========================SEGUNDO APARTADO==========================-->
+        <div class="contenido-semana">
+            <h1>Actividades y apuntes en clase</h1>
+
+            <!-- Agregamos la clase grid-asimetrico -->
+            <section class="evidencias-semana grid-asimetrico">
+
+                <!-- ACTIVIDAD 1 (Arriba Izquierda) -->
+                <div class="tema-redes actividad-1">
+                    <h2>ACTIVIDAD #1</h2>
+                    <p>Realizar una exposición PechaKucha. Modelo OSI capa enlace de datos.</p>
+                    <img src="../media/img/week3/Actividad1.PNG" alt="Evidencia Actividad 1">
+                    <a href="https://canva.link/vzrtvo8hg17prcs" target="_blank" class="btn-solucion">VER
+                        PRESENTACIÓN</a>
+                </div>
+
+                <!-- ACTIVIDAD 2 CON CARRUSEL (Abajo Izquierda) -->
+                <div class="tema-redes actividad-2">
+                    <h2>ACTIVIDAD #2</h2>
+                    <p>Observar el siguiente video y tomar apuntes sobre lo observado:</p>
+                    <a href="https://www.youtube.com/watch?v=r8mDFV0Aioo" target="_blank" class="btn-solucion"
+                        style="margin-bottom: 1.5rem;">VER VIDEO</a>
+
+                    <!-- Estructura del Carrusel de Imágenes -->
+                    <div class="carrusel-contenedor" id="carrusel-act2">
+                        <button class="btn-carrusel btn-prev">&#10094;</button>
+                        <div class="carrusel-pista">
+                            <div class="carrusel-slide"><img src="../media/img/week3/Actividad2-2.PNG" alt="Apunte 1">
+                            </div>
+                            <div class="carrusel-slide"><img src="../media/img/week3/Actividad2-2.PNG" alt="Apunte 2">
+                            </div>
+                            <div class="carrusel-slide"><img src="../media/img/week3/Actividad2-3.jpeg  " alt="Apunte 3">
+                            </div>
+                        </div>
+                        <button class="btn-carrusel btn-next">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- ACTIVIDAD 3 (Derecha, centrada verticalmente) -->
+                <div class="tema-redes actividad-3">
+                    <h2>ACTIVIDAD #3</h2>
+                    <p>Recorrido por el bloque de la universidad en busca de estaciones con ayuda de pistas.</p>
+                    <img src="../media/img/week3/Actividad3.PNG" alt="Evidencia Actividad 3">
+                    <a href="https://drive.google.com/uc?export=download&id=1OsL6TDPQVvCFlhB4yz_8W0gA7sECRpqI"
+                        target="_blank" class="btn-solucion">DESCARGAR PDF</a>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer General -->
+    <footer>
+        <!-- Texto de derechos de autor -->
+        <span class="copy-footer">&copy; 2026 NET_ARCHIVE // PORTAFOLIO. Todos los derechos reservados.</span>
+
+        <!-- Enlaces adicionales -->
+        <ul>
+            <!-- Enlace al repositorio de documentación en GitHub -->
+            <li><a href="https://github.com/yepoxtrop/Portafolio-Redes-Corte-I" target="_blank"
+                    style="text-decoration:none">Documentación</a></li>
+            <!-- Enlace de sorpresas (easter egg) -->
+            <li><a href="https://www.youtube.com/watch?v=lLSu0UHNZhU&pp=ygUVbWFwYWNoZSBjb21pZW5kbyB1dmFz"
+                    target="_blank" style="text-decoration:none">Sorpresas</a></li>
+        </ul>
+    </footer>
+    <script src="../scripts/week3/week3.js"></script>
+</body>
+</html>
