@@ -21,6 +21,22 @@ body {
     "Segoe UI",
     sans-serif;
 }
+
+@keyframes premiseReveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header,
+.shell > * {
+  animation: premiseReveal .65s ease both;
+}
+
+.shell > *:nth-child(2) { animation-delay: .12s; }
+.shell > *:nth-child(3) { animation-delay: .24s; }
+.shell > *:nth-child(4) { animation-delay: .36s; }
+.shell > *:nth-child(5) { animation-delay: .48s; }
+
 button,
 a,
 summary {
@@ -289,6 +305,15 @@ p {
 .audit-card:hover {
   box-shadow: 0 10px 24px #263b7710;
   transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
 }
 .purple {
   --accent: #7250c7;

@@ -3,7 +3,7 @@
 import { ARRAY_INIT_KONSOLE, ARRAY_KONSOLE_ERROR } from "../consts/konsole.index.js";
 
 const SECTION_KONSOLE = document.querySelector(".terminal-body-section1");
-const SECTION_KONSOLE_ERROR = document.querySelector(".terminal-error");
+const SECTION_KONSOLE_ERROR = document.querySelector(".terminal-body > div:last-child");
 
 function konsole(listContent, listObjectsDOM) {
     
