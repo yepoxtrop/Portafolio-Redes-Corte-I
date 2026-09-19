@@ -219,6 +219,18 @@ header {
     font-weight: bold;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     flex-shrink: 0;
+    animation: flow-arrow 1.7s ease-in-out infinite;
+}
+
+@keyframes flow-arrow {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    50% {
+        transform: translateX(6px) scale(1.05);
+        box-shadow: 0 8px 18px rgba(8, 90, 192, 0.15);
+    }
 }
 
 /* =========================================
