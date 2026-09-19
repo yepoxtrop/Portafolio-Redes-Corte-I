@@ -321,6 +321,17 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.evidencias-semana .tema-redes video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: var(--surface-container-low);
+    border-radius: var(--radius-md);
+}
+
 /* =========================================
    Posicionamiento de las Actividades
    ========================================= */
@@ -471,9 +482,104 @@ footer {
     .contenido-semana {
         max-width: 95%;
     }
+
+    header {
+        padding-inline: var(--spacing-lg);
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+    }
+
+    header nav ul {
+        gap: var(--spacing-sm);
+    }
 }
 
 @media (max-width: 768px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    header h1 {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    header nav,
+    header nav ul {
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: var(--spacing-sm);
+    }
+
+    .contenido-semana {
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+
+    .contenido-semana h1 {
+        font-size: 1.35rem;
+        line-height: 1.35;
+        margin-bottom: 1.75rem;
+    }
+
+    .seccion-tema {
+        margin-bottom: 2.5rem;
+    }
+
+    .seccion-tema h2 {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .tabla-modelos {
+        min-width: 600px;
+    }
+
+    .tabla-modelos th,
+    .tabla-modelos td {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .evidencias-semana .tema-redes {
+        padding: 1.5rem 0;
+    }
+
+    .evidencias-semana .tema-redes video {
+        max-width: 100%;
+    }
+
+    .medios-intro,
+    .tarjeta-medio,
+    .tarjeta-capa,
+    .paso-flujo {
+        padding: 1rem;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    footer ul {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
     /* Las capas pasan a 1 sola columna */
     .grid-capas {
         grid-template-columns: 1fr;
@@ -509,5 +615,43 @@ footer {
     /* Agregamos .premisa-1 a la regla de la línea horizontal inferior */
     .actividad-1, .actividad-2, .premisa-1 {
         border-bottom: 1px solid var(--outline-variant); 
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 0.35rem 0;
+        font-size: 0.8rem;
+    }
+
+    .contenido-semana h1 {
+        font-size: 1.2rem;
+    }
+
+    .flujo-comunicacion {
+        gap: 0.5rem;
+    }
+
+    .flecha-indicadora {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-solucion {
+        max-width: 100%;
+        text-align: center;
+        padding-inline: 1rem;
+    }
+
+    .copy-footer {
+        font-size: 0.8rem;
+        line-height: 1.5;
     }
 }
